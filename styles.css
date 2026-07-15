@@ -473,6 +473,47 @@ h1 span {
   grid-column: 1 / -1;
 }
 
+.event-gallery-section {
+  margin-top: 14px;
+  padding: 36px 30px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgba(31, 77, 184, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 250, 255, 0.98));
+  border: 1px solid rgba(23, 34, 53, 0.08);
+}
+
+.event-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.event-photo-card {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.event-photo-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.event-photo-card figcaption {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.94));
+}
+
+.event-photo-card h3 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
 .resource-layout {
   display: grid;
   grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
@@ -1250,7 +1291,8 @@ blockquote {
   .about-grid,
   .interview-grid,
   .resource-layout,
-  .moments-grid {
+  .moments-grid,
+  .event-gallery-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1332,6 +1374,10 @@ blockquote {
   .resource-feature,
   .training-intro {
     padding: 20px;
+  }
+
+  .event-gallery-section {
+    padding: 24px 18px;
   }
 
   .panel {
